@@ -37,6 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+# Third Aparty Apps
+    'corsheaders',
+    'rest_framework',
+    'drf_yasg',
+
+#     custom apps
+    'urlShortener.apps.UrlshortenerConfig',
 ]
 
 MIDDLEWARE = [
