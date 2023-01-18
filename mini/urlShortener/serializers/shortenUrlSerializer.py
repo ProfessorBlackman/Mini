@@ -1,9 +1,11 @@
 from rest_framework import serializers
 
 
+#  serializer for ShortenUrlView
 class ShortenUrlSerializer(serializers.Serializer):
 
     """
     Serializer for url shortening endpoint.
     """
-    long_url = serializers.CharField(min_length=8, required=True, write_only=True)
+    name = serializers.CharField(max_length=300)
+    long_url = serializers.CharField(max_length=300, required=True)
