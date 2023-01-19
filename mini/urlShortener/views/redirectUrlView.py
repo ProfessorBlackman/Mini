@@ -22,6 +22,7 @@ class RedirectUrl(APIView):
                 urldata = UrlData.objects.get(slug=slug)
                 long = urldata.long_url
                 urldata.no_of_uses += 1
+                urldata.save()
 
             except (TypeError, ValueError, OverflowError, urldata.DoesNotExist):
                 response = {

@@ -8,7 +8,7 @@ class UrlData(models.Model):
     short_url = models.CharField(max_length=20, blank=False, null=False, unique=True)
     slug = models.CharField(max_length=8, unique=True)
     no_of_uses = models.IntegerField(default=0)
-    timestamp = models.DateTimeField(auto_now_add=True)
+    timestamp = models.DateTimeField(auto_now_add=True, blank=False, null=False)
 
     def __str__(self):
         return self.name
